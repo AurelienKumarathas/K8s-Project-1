@@ -33,7 +33,7 @@ jobs:
         run: |
           docker build -t k8s:latest .
           docker tag k8s:latest aurelienkumarathas/k8s:latest
-          docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_TOKEN }}
           docker push aurelienkumarathas/k8s:latest
         env:
           DOCKER_CLI_ACI: 1
